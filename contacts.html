@@ -6,23 +6,46 @@
   <meta name="description" content="Сторінка з повною контактною інформацією Іллі.">
   <title>Контакти | Ілля</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="contacts">
   <header class="hero" id="top">
     <div class="container hero__content">
       <img class="hero__avatar" src="https://en.meming.world/images/en/thumb/4/46/Staring_Avatar_Guy.jpg/300px-Staring_Avatar_Guy.jpg" alt="Портрет студента Іллі" width="220" height="220">
       <div class="hero__text">
-        <p class="hero__role">Student Portfolio</p>
-        <h1>Контакти</h1>
-        <a class="hero__cta" href="index.html">На головну</a>
+        <p class="hero__role" data-i18n="contacts.hero.role">Портфоліо</p>
+        <h1 data-i18n="contacts.hero.title">Контакти</h1>
+
+        <div class="hero__actions">
+          <a class="hero__cta" href="index.html" data-i18n="contacts.hero.backHome">На головну</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <nav class="main-nav" aria-label="Головна навігація">
+  <nav class="main-nav" aria-label="Головна навігація" data-i18n-aria-label="nav.mainAria">
     <ul>
-      <li><a href="index.html">Головна</a></li>
-      <li><a href="contacts.html" aria-current="page">Контакти</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Головна</a></li>
+      <li><a href="contacts.html" aria-current="page" data-i18n="nav.contacts">Контакти</a></li>
+      <li class="lang-switch" aria-label="Мова" data-i18n-aria-label="language.label">
+        <button class="lang-switch__button" id="langUk" type="button" data-lang="uk" aria-pressed="true" data-i18n="language.ua">UA</button>
+        <button class="lang-switch__button" id="langEn" type="button" data-lang="en" aria-pressed="false" data-i18n="language.en">EN</button>
+      </li>
+      <li>
+        <button class="main-nav__button theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Темна тема" title="Темна тема">
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2.5v2.5M12 19v2.5M21.5 12H19M5 12H2.5M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8M18.7 18.7l-1.8-1.8M7.1 7.1 5.3 5.3"></path>
+            </svg>
+          </span>
+        </button>
+      </li>
     </ul>
   </nav>
 
@@ -30,13 +53,13 @@
     <section class="section section--alt">
       <div class="container">
         <article class="card">
-          <h2>Усі контакти</h2>
+          <h2 data-i18n="contacts.section.allContactsTitle">Усі контакти</h2>
           <address>
-            <p><strong>Email:</strong> <a href="mailto:illia.student@email.com">illia.student@email.com</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/illia</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">linkedin.com/in/illia</a></p>
-            <p><strong>Telegram:</strong> <a href="https://t.me/" target="_blank" rel="noopener noreferrer">@illia</a></p>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">instagram.com/illia</a></p>
+            <p><strong data-i18n="contacts.section.emailLabel">Email:</strong> <a href="mailto:illia.student@email.com">illia.student@email.com</a></p>
+            <p><strong data-i18n="contacts.section.githubLabel">GitHub:</strong> <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/illia</a></p>
+            <p><strong data-i18n="contacts.section.linkedinLabel">LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">linkedin.com/in/illia</a></p>
+            <p><strong data-i18n="contacts.section.telegramLabel">Telegram:</strong> <a href="https://t.me/" target="_blank" rel="noopener noreferrer">@illia</a></p>
+            <p><strong data-i18n="contacts.section.instagramLabel">Instagram:</strong> <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">instagram.com/illia</a></p>
           </address>
         </article>
       </div>
@@ -46,8 +69,8 @@
   <footer>
     <div class="container footer__content">
       <div>
-        <p>&copy; 2026 Ілля. Усі права захищено.</p>
-        <p><a href="index.html">Повернутися на головну</a></p>
+        <p>&copy; 2026 Ілля. <span data-i18n="common.rights">Усі права захищено.</span></p>
+        <p><a href="index.html" data-i18n="contacts.footer.backHome">Повернутися на головну</a></p>
       </div>
       <ul class="footer-contacts">
         <li><strong>Email:</strong> <a href="mailto:illia.student@email.com">illia.student@email.com</a></li>
@@ -55,5 +78,8 @@
       </ul>
     </div>
   </footer>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Повернутися догори" data-i18n-aria-label="common.backToTopAria">↑</button>
 </body>
 </html>

@@ -1,0 +1,166 @@
+{
+  "lang": "en",
+  "site": {
+    "pageTitles": {
+      "index": "Student Portfolio | Illia",
+      "contacts": "Contacts | Illia"
+    },
+    "metaDescriptions": {
+      "index": "Student portfolio landing page: about me, skills, projects, education, experience, and contacts.",
+      "contacts": "Page with Illia's full contact information."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "mainAria": "Main navigation"
+  },
+  "language": {
+    "label": "Language",
+    "ua": "UA",
+    "en": "EN"
+  },
+  "theme": {
+    "dark": "Dark theme",
+    "light": "Light theme"
+  },
+  "common": {
+    "backToTopAria": "Back to top",
+    "rights": "All rights reserved."
+  },
+  "modal": {
+    "closeAria": "Close modal window",
+    "repoLink": "Repository"
+  },
+  "index": {
+    "hero": {
+      "role": "Portfolio",
+      "ctaProjects": "My projects"
+    },
+    "about": {
+      "title": "About Me",
+      "text": "I enjoy A24 movies, shooting film photography, riding a bicycle, and programming in data science. I am most interested in combining analytical thinking with visually clean web interfaces."
+    },
+    "skills": {
+      "title": "Skills",
+      "stackTitle": "Tech Stack",
+      "stackItems": ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "R", "SQL", "Git/GitHub"],
+      "softTitle": "Soft Skills",
+      "softItems": ["Critical thinking", "Teamwork", "Time management", "Communication", "Self-organization", "Presenting ideas"]
+    },
+    "projectsSection": {
+      "title": "Projects",
+      "controlsAria": "Project list controls",
+      "tagListAria": "Filter by tags",
+      "shownLabel": "Shown:",
+      "noscript": "Enable JavaScript in your browser to display the dynamic project list."
+    },
+    "education": {
+      "title": "Education",
+      "universityTitle": "National University",
+      "specialtyLabel": "Major:",
+      "specialtyValue": "Computer Science",
+      "periodLabel": "Period:",
+      "periodValue": "2024 - 2028",
+      "coursesTitle": "Additional Courses",
+      "courses": [
+        "UI/UX Design Fundamentals (2025)",
+        "Frontend Basics: HTML/CSS/JS (2025)",
+        "Git and Team Development (2026)"
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "practiceTitle": "Training Practice in IT Lab",
+      "periodLabel": "Period:",
+      "practicePeriod": "June 2025 - August 2025",
+      "practiceItems": [
+        "Built webpage structures for internal projects.",
+        "Prepared content and edited HTML templates.",
+        "Worked with Git in a team of 4 students."
+      ],
+      "volunteerTitle": "University Volunteer Project",
+      "roleLabel": "Role:",
+      "volunteerRole": "event page developer",
+      "volunteerItems": [
+        "Built a landing page for a charity fair event.",
+        "Designed the \"About\", \"Program\", and \"Contacts\" sections."
+      ]
+    },
+    "footer": {
+      "allContacts": "All contacts"
+    }
+  },
+  "contacts": {
+    "hero": {
+      "role": "Portfolio",
+      "title": "Contacts",
+      "backHome": "Back to home"
+    },
+    "section": {
+      "allContactsTitle": "All Contacts",
+      "emailLabel": "Email:",
+      "githubLabel": "GitHub:",
+      "linkedinLabel": "LinkedIn:",
+      "telegramLabel": "Telegram:",
+      "instagramLabel": "Instagram:"
+    },
+    "footer": {
+      "backHome": "Back to home"
+    }
+  },
+  "projects": {
+    "allTag": "All",
+    "detailsButton": "Details",
+    "repoLink": "Repository",
+    "emptyTitle": "Nothing found",
+    "emptyText": "Try another tag.",
+    "items": [
+      {
+        "id": "events",
+        "title": "Student Events Poster Site",
+        "description": "A single-page site with a program, speakers, and registration block.",
+        "details": "Focus: clean layout, structured content, section navigation, and small interactions (buttons/links).",
+        "tags": ["HTML", "CSS", "Landing"],
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "cv",
+        "title": "Online CV",
+        "description": "A personal resume website focused on structure and readability.",
+        "details": "Focus: logical sections, typography, responsiveness. In this practical task, JS is used for filtering/search and theme switching.",
+        "tags": ["HTML", "CSS", "Portfolio"],
+        "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "todo",
+        "title": "Todo List",
+        "description": "A mini app for task management with basic JavaScript logic.",
+        "details": "Focus: state, events, and list rendering. This version demonstrates an array + DOM approach.",
+        "tags": ["JavaScript", "DOM", "Practice"],
+        "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "gallery",
+        "title": "Mini Photo Gallery",
+        "description": "A page with image cards and simple filtering.",
+        "details": "Focus: rendering from data, event delegation, dataset usage, and basic UI states.",
+        "tags": ["JavaScript", "UI", "Filter"],
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "notes",
+        "title": "Course Notes",
+        "description": "A small reference page with course topics and examples.",
+        "details": "Focus: structuring information, micro-interactions, and a neat interface without frameworks.",
+        "tags": ["JavaScript", "Content", "Search"],
+        "image": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "lang": "uk",
+  "site": {
+    "pageTitles": {
+      "index": "Портфоліо студента | Ілля",
+      "contacts": "Контакти | Ілля"
+    },
+    "metaDescriptions": {
+      "index": "Лендінг-портфоліо студента: про мене, навички, проєкти, освіта, досвід і контакти.",
+      "contacts": "Сторінка з повною контактною інформацією Іллі."
+    }
+  },
+  "nav": {
+    "home": "Головна",
+    "contacts": "Контакти",
+    "mainAria": "Головна навігація"
+  },
+  "language": {
+    "label": "Мова",
+    "ua": "UA",
+    "en": "EN"
+  },
+  "theme": {
+    "dark": "Темна тема",
+    "light": "Світла тема"
+  },
+  "common": {
+    "backToTopAria": "Повернутися догори",
+    "rights": "Усі права захищено."
+  },
+  "modal": {
+    "closeAria": "Закрити модальне вікно",
+    "repoLink": "Репозиторій"
+  },
+  "index": {
+    "hero": {
+      "role": "Портфоліо",
+      "ctaProjects": "Мої проєкти"
+    },
+    "about": {
+      "title": "Про мене",
+      "text": "Люблю фільми студії A24, фотографувати на аналогову плівку, кататися на велосипеді та програмувати у сфері data science. Найбільше цікаво поєднувати аналітичне мислення з візуально чистими веб-інтерфейсами."
+    },
+    "skills": {
+      "title": "Навички",
+      "stackTitle": "Стек технологій",
+      "stackItems": ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "R", "SQL", "Git/GitHub"],
+      "softTitle": "Soft Skills",
+      "softItems": ["Критичне мислення", "Командна робота", "Тайм-менеджмент", "Комунікація", "Самоорганізація", "Презентація ідей"]
+    },
+    "projectsSection": {
+      "title": "Проєкти",
+      "controlsAria": "Керування списком проєктів",
+      "tagListAria": "Фільтр за тегами",
+      "shownLabel": "Показано:",
+      "noscript": "Для відображення динамічного списку проєктів увімкни JavaScript у браузері."
+    },
+    "education": {
+      "title": "Освіта",
+      "universityTitle": "Національний університет",
+      "specialtyLabel": "Спеціальність:",
+      "specialtyValue": "Комп'ютерні науки",
+      "periodLabel": "Період:",
+      "periodValue": "2024 - 2028",
+      "coursesTitle": "Додаткові курси",
+      "courses": [
+        "Основи UI/UX-дизайну (2025)",
+        "Frontend Basics: HTML/CSS/JS (2025)",
+        "Git та командна розробка (2026)"
+      ]
+    },
+    "experience": {
+      "title": "Досвід",
+      "practiceTitle": "Навчальна практика в IT-лабораторії",
+      "periodLabel": "Період:",
+      "practicePeriod": "червень 2025 - серпень 2025",
+      "practiceItems": [
+        "Створення структури веб-сторінок для внутрішніх проєктів.",
+        "Підготовка контенту та редагування HTML-шаблонів.",
+        "Робота з Git у команді з 4 студентів."
+      ],
+      "volunteerTitle": "Волонтерський проєкт університету",
+      "roleLabel": "Роль:",
+      "volunteerRole": "розробник сторінки події",
+      "volunteerItems": [
+        "Верстка інформаційної сторінки для благодійного ярмарку.",
+        "Оформлення секцій \"Про захід\", \"Програма\", \"Контакти\"."
+      ]
+    },
+    "footer": {
+      "allContacts": "Усі контакти"
+    }
+  },
+  "contacts": {
+    "hero": {
+      "role": "Портфоліо",
+      "title": "Контакти",
+      "backHome": "На головну"
+    },
+    "section": {
+      "allContactsTitle": "Усі контакти",
+      "emailLabel": "Email:",
+      "githubLabel": "GitHub:",
+      "linkedinLabel": "LinkedIn:",
+      "telegramLabel": "Telegram:",
+      "instagramLabel": "Instagram:"
+    },
+    "footer": {
+      "backHome": "Повернутися на головну"
+    }
+  },
+  "projects": {
+    "allTag": "Усі",
+    "detailsButton": "Деталі",
+    "repoLink": "Репозиторій",
+    "emptyTitle": "Нічого не знайдено",
+    "emptyText": "Спробуй вибрати інший тег.",
+    "items": [
+      {
+        "id": "events",
+        "title": "Сайт-афіша студентських подій",
+        "description": "Односторінковий сайт із програмою, спікерами та блоком реєстрації.",
+        "details": "Фокус: чиста верстка, структурований контент, навігація по секціях, невеликі інтерактивності (кнопки/посилання).",
+        "tags": ["HTML", "CSS", "Landing"],
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "cv",
+        "title": "Онлайн CV",
+        "description": "Персональний сайт-резюме з акцентом на структуру та читабельність.",
+        "details": "Фокус: логічні секції, типографіка, адаптивність. У цій практичній — JS для фільтрації/пошуку та теми.",
+        "tags": ["HTML", "CSS", "Portfolio"],
+        "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "todo",
+        "title": "Todo List",
+        "description": "Міні-застосунок для керування задачами з базовою логікою JavaScript.",
+        "details": "Фокус: робота зі станом, подіями, рендерингом списку. У цій версії показано підхід з масивами та DOM.",
+        "tags": ["JavaScript", "DOM", "Practice"],
+        "image": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "gallery",
+        "title": "Міні-галерея фото",
+        "description": "Сторінка з картками зображень і простим пошуком/фільтром.",
+        "details": "Фокус: рендер з даних, делегування подій, робота з dataset, базові UI-стани.",
+        "tags": ["JavaScript", "UI", "Filter"],
+        "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      },
+      {
+        "id": "notes",
+        "title": "Нотатки навчального курсу",
+        "description": "Невеликий довідник з темами курсу та прикладами.",
+        "details": "Фокус: структурування інформації, мікро-інтерактивності (пошук), акуратний інтерфейс без фреймворків.",
+        "tags": ["JavaScript", "Content", "Search"],
+        "image": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=900&q=80",
+        "repo": "https://github.com/"
+      }
+    ]
+  }
+}
