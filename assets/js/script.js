@@ -100,7 +100,7 @@ async function loadTranslations(lang) {
 
   // fetch() використовується для завантаження JSON із файлів перекладу.
   // Для цього сайт потрібно запускати через локальний сервер, а не file://
-  const response = await fetch(`${lang}.json`, { cache: "no-cache" });
+  const response = await fetch(getTranslationsFileUrl(lang), { cache: "no-cache" });
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}`);
   }
@@ -108,6 +108,17 @@ async function loadTranslations(lang) {
   const data = await response.json();
   I18N_CACHE.set(lang, data);
   return data;
+}
+
+function getTranslationsFileUrl(lang) {
+  // Визначаємо шлях до JSON відносно script.js, щоб код працював і з index.html, і з pages/contacts.html.
+  const scriptEl = document.querySelector('script[src$="assets/js/script.js"], script[src$="../assets/js/script.js"]');
+  if (scriptEl?.src) {
+    return new URL(`../data/${lang}.json`, scriptEl.src).href;
+  }
+
+  // Fallback для нестандартного підключення.
+  return `../assets/data/${lang}.json`;
 }
 
 function initTheme() {
