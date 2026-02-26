@@ -3,218 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Лендінг-портфоліо студента: про мене, навички, проєкти, освіта, досвід і контакти.">
-  <title>Портфоліо студента | Ілля</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/script.js" defer></script>
+  <meta name="description" content="Навігаційна сторінка з посиланнями на практичні роботи з веб-розробки.">
+  <title>Веб-технології та веб-дизайн (лабораторні роботи)</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #151515;
+      --muted: #666;
+      --line: #e3e3e7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(circle at top right, #ececf4, #f7f7f8 45%);
+      color: var(--text);
+    }
+    .wrap {
+      width: min(880px, 100%);
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 34px;
+    }
+    p.lead {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+    }
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+    .links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    a.btn {
+      display: inline-block;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      text-decoration: none;
+      background: #fff;
+      font-weight: 600;
+    }
+    a.btn:hover {
+      background: #f0f0f4;
+    }
+  </style>
 </head>
-<body data-page="index">
-  <header class="hero" id="top">
-    <div class="container hero__content">
-      <img class="hero__avatar" src="https://en.meming.world/images/en/thumb/4/46/Staring_Avatar_Guy.jpg/300px-Staring_Avatar_Guy.jpg" alt="Портрет студента Іллі" width="220" height="220">
-      <div class="hero__text">
-        <p class="hero__role" data-i18n="index.hero.role">Портфоліо</p>
-        <h1>Ілля</h1>
+<body>
+  <main class="wrap">
+    <h1>Веб-технології та веб-дизайн (лабораторні роботи)</h1>
 
-        <div class="hero__actions">
-          <a class="hero__cta" href="#projects" data-i18n="index.hero.ctaProjects">Мої проєкти</a>
+    <section class="grid" aria-label="Список лабораторних робіт">
+      <article class="card">
+        <h2>Лабораторна робота №2</h2>
+        <p>Тема: Використання CSS у дизайні сайтів</p>
+        <div class="links">
+          <a class="btn" href="#" aria-disabled="true">Посилання на репозиторій</a>
+          <a class="btn" href="pr2/index.html">Сайт</a>
         </div>
-      </div>
-    </div>
-  </header>
+      </article>
 
-  <nav class="main-nav" aria-label="Головна навігація" data-i18n-aria-label="nav.mainAria">
-    <ul>
-      <li><a href="index.html" aria-current="page" data-i18n="nav.home">Головна</a></li>
-      <li><a href="pages/contacts.html" data-i18n="nav.contacts">Контакти</a></li>
-      <li class="lang-switch" aria-label="Мова" data-i18n-aria-label="language.label">
-        <button class="lang-switch__button" id="langUk" type="button" data-lang="uk" aria-pressed="true" data-i18n="language.ua">UA</button>
-        <button class="lang-switch__button" id="langEn" type="button" data-lang="en" aria-pressed="false" data-i18n="language.en">EN</button>
-      </li>
-      <li>
-        <button class="main-nav__button theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Темна тема" title="Темна тема">
-          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
-            </svg>
-          </span>
-          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M12 2.5v2.5M12 19v2.5M21.5 12H19M5 12H2.5M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8M18.7 18.7l-1.8-1.8M7.1 7.1 5.3 5.3"></path>
-            </svg>
-          </span>
-        </button>
-      </li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="about" class="section">
-      <div class="container">
-        <h2 data-i18n="index.about.title">Про мене</h2>
-        <p data-i18n="index.about.text">
-          Люблю фільми студії A24, фотографувати на аналогову плівку, кататися на велосипеді та програмувати у сфері data science.
-          Найбільше цікаво поєднувати аналітичне мислення з візуально чистими веб-інтерфейсами.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="section section--alt">
-      <div class="container">
-        <h2 data-i18n="index.skills.title">Навички</h2>
-        <div class="grid-two">
-          <article class="card">
-            <h3 data-i18n="index.skills.stackTitle">Стек технологій</h3>
-            <ul>
-              <li data-i18n="index.skills.stackItems.0">HTML</li>
-              <li data-i18n="index.skills.stackItems.1">CSS</li>
-              <li data-i18n="index.skills.stackItems.2">JavaScript</li>
-              <li data-i18n="index.skills.stackItems.3">TypeScript</li>
-              <li data-i18n="index.skills.stackItems.4">Python</li>
-              <li data-i18n="index.skills.stackItems.5">R</li>
-              <li data-i18n="index.skills.stackItems.6">SQL</li>
-              <li data-i18n="index.skills.stackItems.7">Git/GitHub</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3 data-i18n="index.skills.softTitle">Soft Skills</h3>
-            <ul>
-              <li data-i18n="index.skills.softItems.0">Критичне мислення</li>
-              <li data-i18n="index.skills.softItems.1">Командна робота</li>
-              <li data-i18n="index.skills.softItems.2">Тайм-менеджмент</li>
-              <li data-i18n="index.skills.softItems.3">Комунікація</li>
-              <li data-i18n="index.skills.softItems.4">Самоорганізація</li>
-              <li data-i18n="index.skills.softItems.5">Презентація ідей</li>
-            </ul>
-          </article>
+      <article class="card">
+        <h2>Лабораторна робота №3</h2>
+        <p>Тема: Використання засобів мови JavaScript для клієнтських сценаріїв</p>
+        <div class="links">
+          <a class="btn" href="#" aria-disabled="true">Посилання на репозиторій</a>
+          <a class="btn" href="pr3/index.html">Сайт</a>
         </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 data-i18n="index.projectsSection.title">Проєкти</h2>
-
-        <div class="controls" aria-label="Керування списком проєктів" data-i18n-aria-label="index.projectsSection.controlsAria">
-          <div class="controls__row">
-            <div class="result-count" aria-live="polite">
-              <span data-i18n="index.projectsSection.shownLabel">Показано:</span> <span id="resultCount">0</span>
-            </div>
-          </div>
-
-          <div class="tag-list" id="tagList" aria-label="Фільтр за тегами" data-i18n-aria-label="index.projectsSection.tagListAria">
-            <!-- кнопки тегів генерує JS -->
-          </div>
-        </div>
-
-        <div class="project-grid" id="projectGrid" aria-live="polite">
-          <!-- картки генерує JS -->
-        </div>
-
-        <noscript>
-          <p class="card" data-i18n="index.projectsSection.noscript">
-            Для відображення динамічного списку проєктів увімкни JavaScript у браузері.
-          </p>
-        </noscript>
-      </div>
-    </section>
-
-    <section id="education" class="section section--alt">
-      <div class="container">
-        <h2 data-i18n="index.education.title">Освіта</h2>
-        <div class="grid-two">
-          <article class="card">
-            <h3 data-i18n="index.education.universityTitle">Національний університет</h3>
-            <p>
-              <strong data-i18n="index.education.specialtyLabel">Спеціальність:</strong>
-              <span data-i18n="index.education.specialtyValue">Комп'ютерні науки</span>
-            </p>
-            <p>
-              <strong data-i18n="index.education.periodLabel">Період:</strong>
-              <span data-i18n="index.education.periodValue">2024 - 2028</span>
-            </p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="index.education.coursesTitle">Додаткові курси</h3>
-            <ol>
-              <li data-i18n="index.education.courses.0">Основи UI/UX-дизайну (2025)</li>
-              <li data-i18n="index.education.courses.1">Frontend Basics: HTML/CSS/JS (2025)</li>
-              <li data-i18n="index.education.courses.2">Git та командна розробка (2026)</li>
-            </ol>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <h2 data-i18n="index.experience.title">Досвід</h2>
-        <div class="grid-two">
-          <article class="card">
-            <h3 data-i18n="index.experience.practiceTitle">Навчальна практика в IT-лабораторії</h3>
-            <p>
-              <strong data-i18n="index.experience.periodLabel">Період:</strong>
-              <span data-i18n="index.experience.practicePeriod">червень 2025 - серпень 2025</span>
-            </p>
-            <ul>
-              <li data-i18n="index.experience.practiceItems.0">Створення структури веб-сторінок для внутрішніх проєктів.</li>
-              <li data-i18n="index.experience.practiceItems.1">Підготовка контенту та редагування HTML-шаблонів.</li>
-              <li data-i18n="index.experience.practiceItems.2">Робота з Git у команді з 4 студентів.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3 data-i18n="index.experience.volunteerTitle">Волонтерський проєкт університету</h3>
-            <p>
-              <strong data-i18n="index.experience.roleLabel">Роль:</strong>
-              <span data-i18n="index.experience.volunteerRole">розробник сторінки події</span>
-            </p>
-            <ul>
-              <li data-i18n="index.experience.volunteerItems.0">Верстка інформаційної сторінки для благодійного ярмарку.</li>
-              <li data-i18n="index.experience.volunteerItems.1">Оформлення секцій "Про захід", "Програма", "Контакти".</li>
-            </ul>
-          </article>
-        </div>
-      </div>
+      </article>
     </section>
   </main>
-
-  <footer>
-    <div class="container footer__content">
-      <div>
-        <p>&copy; 2026 Ілля. <span data-i18n="common.rights">Усі права захищено.</span></p>
-      </div>
-      <ul class="footer-contacts">
-        <li><strong>Email:</strong> <a href="mailto:illia.student@email.com">illia.student@email.com</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/illia</a></li>
-        <li><a href="pages/contacts.html" data-i18n="index.footer.allContacts">Усі контакти</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <!-- Back to top -->
-  <button id="backToTop" class="back-to-top" type="button" aria-label="Повернутися догори" data-i18n-aria-label="common.backToTopAria">↑</button>
-
-  <!-- Modal -->
-  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal__overlay" data-action="close"></div>
-
-    <div class="modal__content" role="document">
-      <button class="modal__close" type="button" data-action="close" aria-label="Закрити модальне вікно" data-i18n-aria-label="modal.closeAria">✕</button>
-
-      <h3 class="modal__title" id="modalTitle">Деталі проєкту</h3>
-      <p class="modal__desc" id="modalDesc"></p>
-
-      <div class="modal__meta">
-        <div class="tag-list tag-list--compact" id="modalTags"></div>
-      </div>
-
-      <p class="modal__links">
-        <a id="modalRepo" href="#" target="_blank" rel="noopener noreferrer" data-i18n="modal.repoLink">Репозиторій</a>
-      </p>
-    </div>
-  </div>
 </body>
 </html>
