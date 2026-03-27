@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Навігаційна сторінка з посиланнями на практичні роботи з веб-розробки.">
-  <title>Веб-технології та веб-дизайн (лабораторні роботи)</title>
+  <title>Веб-технології та веб-дизайн</title>
   <style>
     :root {
       --bg: #f7f7f8;
@@ -29,6 +29,13 @@
       margin: 0 0 10px;
       font-size: 34px;
     }
+    .subtitle {
+      display: block;
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--muted);
+    }
     p.lead {
       margin: 0 0 24px;
       color: var(--muted);
@@ -36,14 +43,15 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 760px;
     }
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 12px;
-      padding: 18px;
+      padding: 20px 22px;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
     }
     .card h2 {
@@ -76,7 +84,10 @@
 </head>
 <body>
   <main class="wrap">
-    <h1>Веб-технології та веб-дизайн (лабораторні роботи)</h1>
+    <h1>
+      Веб-технології та веб-дизайн
+      <span class="subtitle">Приклади коду для виконання практичних робіт</span>
+    </h1>
 
     <section class="grid" aria-label="Список лабораторних робіт">
       <article class="card">
@@ -94,6 +105,15 @@
         <div class="links">
           <a class="btn" href="https://github.com/eternal-enot/web_examples_for_students/tree/main/pr3" target="_blank" rel="noopener noreferrer">Посилання на репозиторій</a>
           <a class="btn" href="pr3/index.html">Сайт</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Лабораторна робота №3 (більш проста версія)</h2>
+        <p>Тема: Використання засобів мови JavaScript для клієнтських сценаріїв</p>
+        <div class="links">
+          <a class="btn" href="https://github.com/eternal-enot/web_examples_for_students/tree/main/pr3_simple" target="_blank" rel="noopener noreferrer">Посилання на репозиторій</a>
+          <a class="btn" href="pr3_simple/index.html">Сайт</a>
         </div>
       </article>
     </section>

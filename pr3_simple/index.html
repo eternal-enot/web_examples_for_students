@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфоліо студента з базовими прикладами JavaScript.">
+  <title>Портфоліо студента</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body data-page="index">
+  <header class="hero">
+    <div class="container">
+      <h1 data-i18n="heroTitle">Ілля</h1>
+      <p data-i18n="heroText">
+        Люблю створювати зручні та зрозумілі вебсторінки, працювати з інтерфейсами
+        та поступово розвиватися у frontend-розробці.
+      </p>
+      <div class="hero__actions">
+        <a class="btn-link" href="#projects" data-i18n="projectsLink">Перейти до проєктів</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container nav-row">
+      <div class="nav-links">
+        <a href="index.html" aria-current="page" data-i18n="navHome">Головна</a>
+        <a href="pages/contacts.html" data-i18n="navContacts">Контакти</a>
+      </div>
+
+      <div class="nav-controls">
+        <button id="langUk" type="button" data-lang="uk">UA</button>
+        <button id="langEn" type="button" data-lang="en">EN</button>
+        <button id="themeToggle" type="button" data-i18n="themeButton">Тема</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2 data-i18n="aboutTitle">Про сторінку</h2>
+        <p data-i18n="aboutText">
+          Люблю фільми студії A24, фотографувати на аналогову плівку, кататися на велосипеді та програмувати.
+          Найбільше цікаво поєднувати аналітичне мислення з візуально чистими веб-інтерфейсами.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <h2 data-i18n="projectsTitle">Проєкти</h2>
+
+        <div class="controls">
+          <p><span data-i18n="shownLabel">Показано:</span> <span id="resultCount">0</span></p>
+          <div class="tag-list" id="tagList"></div>
+        </div>
+
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <p data-i18n="footerText">Портфоліо студента.</p>
+      <a href="pages/contacts.html" data-i18n="footerContacts">Відкрити контакти</a>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button">↑</button>
+
+  <div class="modal" id="projectModal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" type="button">×</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <p id="modalDetails"></p>
+      <p><a id="modalRepo" href="#" target="_blank" rel="noopener noreferrer" data-i18n="repoLink">Репозиторій</a></p>
+    </div>
+  </div>
+</body>
+</html>
