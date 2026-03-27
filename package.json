@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build:pr6": "tsc -p pr6/tsconfig.json",
+    "check:pr6": "tsc -p pr6/tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}

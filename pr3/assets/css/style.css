@@ -117,6 +117,15 @@ img {
   color: var(--muted);
 }
 
+.hero__label {
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+}
+
 .hero h1 {
   margin: 8px 0 12px;
   font-size: 46px;

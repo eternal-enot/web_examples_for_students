@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Приклад роботи з відкритим зовнішнім API за допомогою HTML, CSS і JavaScript.">
+  <title>Практична робота №5 | Зовнішнє API</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="hero__label">ПРАКТИЧНА РОБОТА №5</p>
+      <h1>Робота з відкритим зовнішнім API</h1>
+      <div class="hero__actions">
+        <a class="btn btn--ghost" href="../index.html">На головну</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container layout">
+        <article class="panel">
+          <h2>Пошук фото собаки</h2>
+          <p class="panel__text">
+            API: <a href="https://dog.ceo/dog-api/" target="_blank" rel="noopener noreferrer">Dog CEO API</a>
+          </p>
+
+          <label class="field">
+            <span>Порода</span>
+            <select id="breedSelect">
+              <option value="">Завантаження списку...</option>
+            </select>
+          </label>
+
+          <div class="actions">
+            <button class="btn" id="loadDogButton" type="button">Показати фото</button>
+          </div>
+
+          <p class="status" id="status">Список порід завантажується...</p>
+        </article>
+
+        <article class="panel panel--preview">
+          <div class="image-box">
+            <img id="dogImage" src="" alt="Фото собаки з API" hidden>
+          </div>
+          <h2 id="dogTitle">Тут з'явиться фото</h2>
+          <p id="dogBreedText" class="panel__text"></p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
