@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Практична робота №7: реактивне керування потоком даних на прикладі Todo застосунку.">
+  <title>Практична робота №7 | Reactive Todo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/vendor/rxjs.umd.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="hero__label">ПРАКТИЧНА РОБОТА №7</p>
+      <h1>Todo List</h1>
+      <div class="hero__actions">
+        <a class="btn btn--ghost" href="../index.html">На головну</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container layout">
+        <article class="panel panel--controls">
+          <form id="todoForm" class="form" novalidate>
+            <label class="field" for="todoInput">Нова задача</label>
+            <div class="row">
+              <input id="todoInput" name="todoInput" type="text" maxlength="120" placeholder="Наприклад: Підготувати конспект" autocomplete="off">
+              <button class="btn" type="submit">Додати</button>
+            </div>
+          </form>
+
+          <div class="filter-group" id="filterButtons" aria-label="Фільтри задач">
+            <button class="btn btn--ghost is-active" type="button" data-filter="all">Усі</button>
+            <button class="btn btn--ghost" type="button" data-filter="active">Активні</button>
+            <button class="btn btn--ghost" type="button" data-filter="completed">Виконані</button>
+          </div>
+
+          <div class="meta" id="metaInfo">Всього: 0 | Активні: 0 | Виконані: 0</div>
+        </article>
+
+        <article class="panel">
+          <h2>Список задач</h2>
+          <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
