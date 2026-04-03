@@ -15,10 +15,3 @@ npm run build:pr7
 
 # 5. Відкрити pr7/index.html через Live Server
 ```
-
-## Що демонструє приклад
-
-- `BehaviorSubject` для стану задач, фільтра і пошуку.
-- `fromEvent` для реактивної обробки подій форми, пошуку і кнопок.
-- `combineLatest` для об'єднання потоків у похідний стан відображення.
-- `debounceTime` і `distinctUntilChanged` для поля пошуку.
