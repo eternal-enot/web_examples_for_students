@@ -3,7 +3,19 @@
     "build:pr6": "tsc -p pr6/tsconfig.json",
     "check:pr6": "tsc -p pr6/tsconfig.json --noEmit",
     "build:pr7": "tsc -p pr7/tsconfig.json",
-    "check:pr7": "tsc -p pr7/tsconfig.json --noEmit"
+    "check:pr7": "tsc -p pr7/tsconfig.json --noEmit",
+    "build:pr8_angular": "npm --prefix pr8_angular run build",
+    "check:pr8_angular": "npm --prefix pr8_angular exec -- tsc -p pr8_angular/tsconfig.app.json --noEmit",
+    "start:pr8_angular": "npm --prefix pr8_angular run start",
+    "build:pr8_react": "npm --prefix pr8_react run build",
+    "check:pr8_react": "npm --prefix pr8_react run build",
+    "start:pr8_react": "npm --prefix pr8_react run dev",
+    "build:pr8_vue": "npm --prefix pr8_vue run build",
+    "check:pr8_vue": "npm --prefix pr8_vue run build",
+    "start:pr8_vue": "npm --prefix pr8_vue run dev",
+    "build:pr9": "npm --prefix pr9 run build",
+    "check:pr9": "npm --prefix pr9 exec -- tsc -p pr9/tsconfig.app.json --noEmit",
+    "start:pr9": "npm --prefix pr9 run start"
   },
   "devDependencies": {
     "typescript": "^6.0.2"

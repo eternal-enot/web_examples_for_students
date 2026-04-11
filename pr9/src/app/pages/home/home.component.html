@@ -1,0 +1,115 @@
+<header class="hero">
+  <div class="container">
+    <p class="hero__label">ПРАКТИЧНА РОБОТА №8</p>
+    <h1>{{ site.texts().heroTitle }}</h1>
+    <p>
+      {{ site.texts().heroText }}
+    </p>
+    <div class="hero__actions">
+      <a class="btn-link" href="#projects">{{ site.texts().projectsLink }}</a>
+    </div>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container nav-row">
+    <button class="burger" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-menu" [class.open]="menuOpen()">
+      <div class="nav-links">
+        <a href="../../../../index.html" (click)="closeMenu()">Список робіт</a>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          {{ site.texts().navHome }}
+        </a>
+        <a routerLink="/contacts" routerLinkActive="active" (click)="closeMenu()">{{ site.texts().navContacts }}</a>
+      </div>
+
+      <div class="nav-controls">
+        <button id="langUk" type="button" [class.active]="site.lang() === 'uk'" (click)="setLanguage('uk')">UA</button>
+        <button id="langEn" type="button" [class.active]="site.lang() === 'en'" (click)="setLanguage('en')">EN</button>
+        <button id="themeToggle" type="button" (click)="toggleTheme()">{{ site.texts().themeButton }}</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h2>{{ site.texts().aboutTitle }}</h2>
+      <p>{{ site.texts().aboutText }}</p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="projects">
+    <div class="container">
+      <h2>{{ site.texts().projectsTitle }}</h2>
+
+      <div class="controls">
+        <p><span>{{ site.texts().shownLabel }}</span> <span>{{ visibleProjects().length }} / {{ site.texts().projects.length }}</span></p>
+        <div class="tag-list">
+          @for (tag of allTags(); track tag) {
+            <button
+              type="button"
+              class="tag-button"
+              [class.active]="selectedTag() === tag"
+              (click)="setTag(tag)"
+            >
+              {{ tag === 'all' ? site.texts().allTag : tag }}
+            </button>
+          }
+        </div>
+      </div>
+
+      <div class="project-grid">
+        @for (project of visibleProjects(); track project.id) {
+          <article class="project-card">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+
+            <div class="project-tags">
+              @for (tag of project.tags; track tag) {
+                <span class="project-tag">{{ tag }}</span>
+              }
+            </div>
+
+            <div class="project-actions">
+              <button type="button" (click)="openModal(project)">{{ site.texts().detailsButton }}</button>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <p>{{ site.texts().footerText }}</p>
+    <a routerLink="/contacts">{{ site.texts().footerContacts }}</a>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" type="button" [class.show]="showBackToTop()" (click)="scrollToTop()">↑</button>
+
+<div class="modal" [class.open]="modalProject() !== null">
+  <div class="modal__overlay" (click)="closeModal()"></div>
+  <div class="modal__content">
+    <button class="modal__close" type="button" (click)="closeModal()">×</button>
+    @if (modalProject(); as project) {
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      <p>{{ project.details }}</p>
+      <p>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">{{ site.texts().repoLink }}</a>
+      </p>
+    }
+  </div>
+</div>

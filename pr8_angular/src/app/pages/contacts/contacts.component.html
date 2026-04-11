@@ -1,0 +1,59 @@
+<header class="hero">
+  <div class="container">
+    <p class="hero__label">ПРАКТИЧНА РОБОТА №8</p>
+    <h1>{{ site.texts().contactsTitle }}</h1>
+    <p>{{ site.texts().contactsText }}</p>
+  </div>
+</header>
+
+<nav class="main-nav">
+  <div class="container nav-row">
+    <div class="nav-links">
+      <a href="../../../../index.html">Список робіт</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ site.texts().navHome }}</a>
+      <a routerLink="/contacts" routerLinkActive="active">{{ site.texts().navContacts }}</a>
+    </div>
+
+    <div class="nav-controls">
+      <button
+        id="langUk"
+        type="button"
+        [class.active]="site.lang() === 'uk'"
+        (click)="setLanguage('uk')"
+      >
+        UA
+      </button>
+      <button
+        id="langEn"
+        type="button"
+        [class.active]="site.lang() === 'en'"
+        (click)="setLanguage('en')"
+      >
+        EN
+      </button>
+      <button id="themeToggle" type="button" (click)="toggleTheme()">{{ site.texts().themeButton }}</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <h2>{{ site.texts().contactsListTitle }}</h2>
+        <p><strong>Email:</strong> <a href="mailto:illia.student@email.com">illia.student@email.com</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/" target="_blank" rel="noopener noreferrer">github.com/illia</a></p>
+        <p><strong>Telegram:</strong> <a href="https://t.me/" target="_blank" rel="noopener noreferrer">@illia</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <p>{{ site.texts().footerText }}</p>
+    <a routerLink="/">{{ site.texts().backHome }}</a>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" type="button" [class.show]="showBackToTop()" (click)="scrollToTop()">↑</button>
