@@ -13,7 +13,7 @@ export const Contacts: React.FC = () => {
     <main>
       <header className="hero">
         <div className="container">
-          <p className="hero__label">ПРАКТИЧНА РОБОТА №3</p>
+          <p className="hero__label">ПРАКТИЧНА РОБОТА №8</p>
           <h1>{texts.contactsTitle}</h1>
           <p>{texts.contactsText}</p>
           <div className="hero__actions">

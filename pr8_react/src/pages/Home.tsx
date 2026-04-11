@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
     <main>
       <header className="hero">
         <div className="container">
-          <p className="hero__label">ПРАКТИЧНА РОБОТА №3</p>
+          <p className="hero__label">ПРАКТИЧНА РОБОТА №8</p>
           <h1>{texts.heroTitle}</h1>
           <p>{texts.heroText}</p>
           <div className="hero__actions">

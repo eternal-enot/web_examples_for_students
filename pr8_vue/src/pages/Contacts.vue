@@ -13,7 +13,7 @@ watchEffect(() => {
   <main>
     <header class="hero">
       <div class="container">
-        <p class="hero__label">ПРАКТИЧНА РОБОТА №3</p>
+        <p class="hero__label">ПРАКТИЧНА РОБОТА №8</p>
         <h1>{{ texts.contactsTitle }}</h1>
         <p>{{ texts.contactsText }}</p>
         <div class="hero__actions">

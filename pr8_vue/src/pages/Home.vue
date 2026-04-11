@@ -31,7 +31,7 @@ watchEffect(() => {
   <main>
     <header class="hero">
       <div class="container">
-        <p class="hero__label">ПРАКТИЧНА РОБОТА №3</p>
+        <p class="hero__label">ПРАКТИЧНА РОБОТА №8</p>
         <h1>{{ texts.heroTitle }}</h1>
         <p>{{ texts.heroText }}</p>
         <div class="hero__actions">
