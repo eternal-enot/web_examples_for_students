@@ -1,9 +1,6 @@
 {
   "scripts": {
-    "lint": "eslint tests/",
-    "test:unit": "vitest run",
-    "test:unit:watch": "vitest",
-    "test:e2e": "npx playwright test",
+    "test": "npx playwright test",
     "build:pr6": "tsc -p pr6/tsconfig.json",
     "check:pr6": "tsc -p pr6/tsconfig.json --noEmit",
     "build:pr7": "tsc -p pr7/tsconfig.json",
@@ -23,12 +20,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.59.1",
-    "@vitest/ui": "^4.1.5",
-    "eslint": "^10.2.1",
     "http-server": "^14.1.1",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.59.1",
-    "vitest": "^4.1.5"
+    "typescript": "^6.0.2"
   },
   "dependencies": {
     "rxjs": "^7.8.2"

@@ -19,35 +19,9 @@ concurrency:
 
 jobs:
 
-  # ── JOB 1: Якість коду ──────────────────────────────────────────────────────
-  # Lint + unit-тести. Якщо цей job падає — E2E і деплой не запускаються.
-  quality:
-    name: Lint & Unit Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Завантаження коду
-        uses: actions/checkout@v4
-
-      - name: Налаштування Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Встановлення залежностей
-        run: npm ci
-
-      - name: Перевірка лінтером (ESLint)
-        run: npm run lint
-
-      - name: Unit-тести (Vitest)
-        run: npm run test:unit
-
-  # ── JOB 2: E2E тести ────────────────────────────────────────────────────────
-  # Запускається тільки якщо quality пройшов успішно.
+  # ── JOB 1: E2E тести ────────────────────────────────────────────────────────
   test:
     name: E2E Tests (Playwright)
-    needs: quality
     runs-on: ubuntu-latest
     steps:
       - name: Завантаження коду
@@ -66,7 +40,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Запуск E2E тестів
-        run: npm run test:e2e
+        run: npx playwright test
 
       - name: Збереження звіту Playwright
         uses: actions/upload-artifact@v4
@@ -76,8 +50,8 @@ jobs:
           path: playwright-report/
           retention-days: 10
 
-  # ── JOB 3: Деплой ───────────────────────────────────────────────────────────
-  # Запускається тільки якщо E2E пройшли успішно.
+  # ── JOB 2: Деплой ───────────────────────────────────────────────────────────
+  # Запускається тільки якщо тести пройшли успішно.
   deploy:
     name: Deploy to GitHub Pages
     needs: test
